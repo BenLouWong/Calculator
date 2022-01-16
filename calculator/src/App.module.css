@@ -1,0 +1,15 @@
+.MemoryClear {
+	margin-top: 1rem;
+	border: solid 2px var(--medGrey);
+	background-color: transparent;
+	border-radius: 15px;
+	padding: 0.5rem;
+	font-size: var(--fontSmall);
+	transition: 0.2s all ease;
+	cursor: pointer;
+}
+
+.MemoryClear:hover {
+	background-color: var(--darkGrey);
+	color: white;
+}
