@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-	height: auto;
+	height: 100%;
 	width: 100%;
+	max-width: var(--maxWidth);
 	padding: 1rem 2rem;
 	background: rgba(189, 189, 189, 0.57);
 	display: flex;

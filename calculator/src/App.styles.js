@@ -36,7 +36,7 @@ export const ButtonContainer02 = styled.div`
 `;
 
 export const ButtonNumber = styled.input`
-	margin: 0.5rem 0;
+	margin: 0.25rem 0;
 	border: none;
 	background-color: black;
 	color: white;
@@ -52,7 +52,7 @@ export const ButtonNumber = styled.input`
 `;
 
 export const ButtonOperation = styled.input`
-	margin: 0.5rem 0;
+	margin: 0.25rem 0;
 	border: none;
 	background-color: var(--orangeLight);
 	color: black;
@@ -66,25 +66,4 @@ export const ButtonOperation = styled.input`
 	:hover {
 		opacity: 0.8;
 	}
-`;
-
-export const MemoryContainer = styled.div`
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-direction: column;
-	margin-left: 2rem;
-	font-size: var(--fontBig);
-	height: auto;
-	width: 15rem;
-	background: rgba(189, 189, 189, 0.87);
-	border-radius: 15px;
-	padding: 2rem;
-`;
-
-export const MemoryItem = styled.div`
-	margin: 0.2rem 0;
-	width: 100%;
-	padding: 0.4rem;
-	text-align: center;
 `;
