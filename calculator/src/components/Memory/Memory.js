@@ -19,7 +19,7 @@ export default function Memory(props) {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setClear(false);
-		}, 4000);
+		}, 2000);
 
 		return () => {
 			clearTimeout(timer);
@@ -35,8 +35,8 @@ export default function Memory(props) {
 		<MemoryContainer>
 			<div className="History">History</div>
 			{clear ? <Spinner></Spinner> : memoryHandler}
-			{/* {memoryHandler}
-			<Spinner></Spinner> */}
+			{/* {memoryHandler} */}
+			{/* <Spinner></Spinner> */}
 			<MemoryClear onClick={memoryClear}>Clear History</MemoryClear>
 		</MemoryContainer>
 	);

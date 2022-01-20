@@ -10,14 +10,13 @@ import {
 import { useState } from "react";
 import Memory from "./components/Memory/Memory";
 
-let memoryArr = [];
-
 const generateNumArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "."];
 const generateFunctions = ["/", "*", "-", "+"];
 
 function App() {
 	const [calc, setCalc] = useState("");
 	const [result, setResult] = useState("");
+	const [memory, setMemory] = useState([]);
 	const ops = ["/", "*", "-", "+", "."];
 
 	const calcHandler = (el) => {
@@ -40,7 +39,7 @@ function App() {
 
 	const resultHandler = () => {
 		setCalc(result.toFixed(2).toString());
-		memoryArr.push(result.toFixed(2).toString());
+		prevMemoryDataHandler(result.toFixed(2).toString());
 	};
 
 	const resetDataHandler = () => {
@@ -64,8 +63,14 @@ function App() {
 		></ButtonOperation>
 	));
 
+	const prevMemoryDataHandler = (memory) => {
+		setMemory((prevMemory) => {
+			return [...prevMemory, memory];
+		});
+	};
+
 	const memoryHandler = (selected) => {
-		memoryArr = selected;
+		setMemory(selected);
 	};
 
 	return (
@@ -94,7 +99,7 @@ function App() {
 					></ButtonNumber>
 				</ButtonContainer02>
 			</CalculatorContainer>
-			<Memory data={memoryArr} onClear={memoryHandler}></Memory>
+			<Memory data={memory} onClear={memoryHandler}></Memory>
 		</Wrapper>
 	);
 }
