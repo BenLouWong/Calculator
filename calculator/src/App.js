@@ -63,6 +63,7 @@ function App() {
 		></ButtonOperation>
 	));
 
+	// When you are working with updated state based on previous state, you should always do it like below, i.e. a function wtihin a function. The inner function will receive the previous state that is called in the update function. IN this case the update function is the resultHandler function
 	const prevMemoryDataHandler = (memory) => {
 		setMemory((prevMemory) => {
 			return [...prevMemory, memory];
